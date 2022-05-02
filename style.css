@@ -34,6 +34,7 @@ main {
   margin: 5rem auto;
   text-align: center;
 }
+
 h2 {
   margin-top: -1rem;
   font-weight: 400;
@@ -51,9 +52,9 @@ main > div > p {
 main > div {
   padding: 1rem;
   text-align: left;
-  box-shadow: 0px 10px 16px 1px rgba(0, 0, 0, 0.27);
-  -webkit-box-shadow: 0px 10px 16px 1px rgba(0, 0, 0, 0.27);
-  -moz-box-shadow: 0px 10px 16px 1px rgba(0, 0, 0, 0.27);
+  box-shadow: 0px 10px 16px 1px rgba(166, 178, 177, 0.27);
+  -webkit-box-shadow: 0px 10px 16px 1px rgba(166, 178, 177, 0.27);
+  -moz-box-shadow: 0px 10px 16px 1px rgba(166, 178, 177, 0.27);
   margin-top: 2rem;
   background-repeat: no-repeat;
   background-position: bottom right;
@@ -63,6 +64,7 @@ main > div {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   height: 200px;
+  min-width: 300px;
   background-origin: content-box;
 }
 main > div > p {
@@ -85,11 +87,16 @@ main > div > p {
   background-image: url("./images/icon-calculator.svg");
   border-top: 5px solid var(--Blue);
 }
-
-@media (min-width: 720px) {
-  header,
-  main {
+footer {
+  text-align: center;
+}
+@media (min-width: 920px) {
+  header {
     width: 600px;
+    margin: 2rem auto;
+  }
+  main {
+    margin-top: 2rem;
   }
   h1,
   h2 {
@@ -99,9 +106,28 @@ main > div > p {
     font-weight: 600;
   }
   main {
+    width: 60%;
     display: grid;
     grid-template-columns: 4;
-    grid-template-rows: 5;
+    grid-template-rows: 4;
+    grid-template-areas: ". box-2 ." "box-1 box-2 box-3 " "box-1 box-4 box-3";
+    grid-gap: 20px;
+  }
+  main > div {
+    margin-top: 0;
   }
   /* .box-1 */
+  .box-1 {
+    grid-area: box-1;
+  }
+  .box-2 {
+    grid-area: box-2;
+  }
+  .box-3 {
+    grid-area: box-3;
+  }
+  .box-4 {
+    grid-area: box-4;
+    /* margin-top: 1rem; */
+  }
 }
