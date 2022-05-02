@@ -31,7 +31,7 @@ main > div > p {
 header,
 main {
   width: 90%;
-  margin: 2rem auto;
+  margin: 5rem auto;
   text-align: center;
 }
 h2 {
@@ -67,16 +67,41 @@ main > div {
 }
 main > div > p {
   width: 90%;
+  margin-top: -1rem;
 }
 .box-1 {
   background-image: url("./images/icon-supervisor.svg");
+  border-top: 5px solid var(--Cyan);
 }
 .box-2 {
   background-image: url("./images/icon-team-builder.svg");
+  border-top: 5px solid var(--Red);
 }
 .box-3 {
   background-image: url("./images/icon-karma.svg");
+  border-top: 5px solid var(--Orange);
 }
 .box-4 {
   background-image: url("./images/icon-calculator.svg");
+  border-top: 5px solid var(--Blue);
+}
+
+@media (min-width: 720px) {
+  header,
+  main {
+    width: 600px;
+  }
+  h1,
+  h2 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-weight: 600;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 4;
+    grid-template-rows: 5;
+  }
+  /* .box-1 */
 }
